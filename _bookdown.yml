@@ -1,4 +1,4 @@
-book_filename: "tws-ckmr-2022"
+book_filename: "euring-ckmr-2023"
 clean: [packages.bib, bookdown.bbl]
 delete_merged_file: true
 output_dir: "_book"

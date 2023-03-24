@@ -4,12 +4,12 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./">TWS-CKMR-2022</a></li>
+        <li><a href="./">EURING-CKMR-2023</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
     download: [pdf, epub]
-    edit: https://github.com/eriqande/tws-ckmr-2022/edit/master/%s
-    history: https://github.com/eriqande/tws-ckmr-2022/commits/master/%s
+    edit: https://github.com/pconn/euring-ckmr-2023/edit/master/%s
+    history: https://github.com/pconn/euring-ckmr-2023/commits/master/%s
     sharing:
       github: true
       facebook: false

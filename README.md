@@ -1,7 +1,12 @@
-# tws-ckmr-2022
+# euring-ckmr-2023
 
-Hello! This is the repository for a short course on CKMR that
-Paul B. Conn and Eric C. Anderson.  The course materials are
+Welcome to the Github repository for a short 3 hour course on CKMR by Paul Conn conducted at the
+Euring 2023 technical meeting in Montpellier, France.  Much of the material
+is derived from a full day course put on by Paul and Eric C. Anderson at the 2022 
+Wildlife Society Meeting, and most of the clever Bookdown/Quarto/Github actions
+stuff was originally put together by Eric.
+
+Lab materials are
 produced by this repository as a [bookdown](https://bookdown.org/)
 document, and all the materials to generate it can be found in this
 repository, which is, itself, an RStudio project.
@@ -11,17 +16,12 @@ and then building the book with the "Build Book" button under the
 RStudio "Build" panel, for example.  
 
 The version of the bookdown document that appears online at
-[https://eriqande.github.io/tws-ckmr-2022/](https://eriqande.github.io/tws-ckmr-2022/)
+[https://pconn.github.io/euring-ckmr-2023/](https://pconn.github.io/euring-ckmr-2023/)
 is generated from these source files; however, the actual rendering is done
-via GitHub Actions.  Thus, if you have push access to this repository
-(basically just Eric and Paul), you can write new chapters/sections/etc., test that
-they build on your own computer (the book will be built into the `_book` subdirectory),
-and then commit the changes to the source (i.e., the `.Rmd` files) and push them
-to GitHub.  This will trigger a build session via GitHub actions which will build the
-book and then copy it to the the `gh-pages` branch which will get served up by
-GitHub pages.   This system may seem a little convoluted, but it reduces the number
-of merge conflicts that occur if various authors are independently committing changes
-directly to files in the `_book` directory.
+via GitHub Actions.  
+
+Slides for the workshop (the primary observed content) were put together with Quarto,
+and are also available for viewing online at [https://pconn.github.io/euring-ckmr-2023/slides/slides.html](https://pconn.github.io/euring-ckmr-2023/slides/slides.html)
 
 This repository is using the 'renv' package to manage all the package dependencies.
 This should, in theory, make it relatively straightforward to get the same versions
@@ -34,7 +34,7 @@ book and run all the examples in it, here are the steps:
 1. clone this repository.  If you are one of the authors, and expect to be pushing changes back to the repository, you will need to have an SSH key with GitHub and clone the repo via the ssh protocol, like this:
 
     ```sh
-    git clone git@github.com:eriqande/tws-ckmr-2022.git
+    git clone git@github.com:pconn/euring-ckmr-2023.git
     ```
 
 2. open the repository with RStudio.  If you are working on a Mac, this
@@ -42,7 +42,7 @@ is easily done from the command line in the directory where the `git clone`
 command was given, like this:
 
     ```sh
-    open tws-ckmr-2022/tws-ckmr-2022.Rproj
+    open euring-ckmr-2023/euring-ckmr-2023.Rproj
     ```
     When Rstudio opens this way, you should get some messages about not
     having certain packages, and you should see in the R console that you
