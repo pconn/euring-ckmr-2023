@@ -1,7 +1,7 @@
 --- 
 title: "Close-kin mark-recapture workshop, Euring Technical Meeting --- Montpellier, France"
 author: "Paul B. Conn"
-date: "April 20, 2023"
+date: "April 21, 2023"
 documentclass: krantz
 bibliography: ["references.bib"]
 biblio-style: apalike
@@ -33,16 +33,15 @@ This is the website/book associated with the Close-kin Mark-recapture workshop t
 
 ## Workshop schedule {-}
 
-An approximate schedule for the workshop is as follows.  Note that when
-a session has slides for a lecture, they are linked below.
+An approximate schedule for the workshop is as follows.
 
 | Time      | Description  |
 | :--:        |    :--------   
-1:00--1:45    |  Close-kin mark-recapture: An overview ([slides](https://pconn.github.io/euring-ckmr-2023/slides/slides_1.html#/section)) | 
-1:45--2:15    |  Genetic data and kinfinding lite ([slides](https://pconn.github.io/euring-ckmr-2023/slides/slides_2.html#/section)) | 
-2:30--2:45    | Break |   |
-2:45--3:45   | Statistical inference for CKMR estimation ([slides](https://pconn.github.io/euring-ckmr-2023/slides/slides_3.html#/section)) | 
-3:45--4:30  | Designing CKMR experiments ([slides](https://pconn.github.io/euring-ckmr-2023/slides/slides_4.html#/section)) |   
+1:00--1:45    |  Close-kin mark-recapture: An overview | 
+1:45--2:15    |  Genetic data and kinfinding lite | 
+2:30--2:45    | Break | 
+2:45--3:45   | Statistical inference for CKMR estimation | 
+3:45--4:30  | Designing CKMR experiments |   
 
 
 ```{r include=FALSE}
@@ -60,7 +59,9 @@ https://github.com/pconn/euring-ckmr-2023
 The "website" version of the course which serves up this book and the
 slides is available at
 
-https://pconn.github.io/euring-ckmr-2023/
+https://pconn.github.io/euring-ckmr-2023/ and
+
+https://pconn.github.io/euring-ckmr-2023/slides/slides.html
 
 These will remain publically available until something breaks!
 
