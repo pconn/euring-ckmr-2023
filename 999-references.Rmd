@@ -33,7 +33,7 @@ quarto::quarto_render(
   "slides/slides.qmd",
   output_format = "revealjs"
 )
-file.rename(from = "slides/slides.html", to = "_book/slides/slides.html")
+file.rename(from = "slides/slides.html", to = "_book/slides/index.html")
 
 
 
