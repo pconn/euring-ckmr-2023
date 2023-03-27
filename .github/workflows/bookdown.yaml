@@ -11,7 +11,7 @@ name: bookdown
 
 jobs:
   bookdown:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     # Only restrict concurrency for non-PR jobs
     concurrency:
       group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
@@ -24,7 +24,7 @@ jobs:
       
       - uses: quarto-dev/quarto-actions/setup@v2
         with: 
-          version: 2.1.2
+          version: 1.1.75
 
       - uses: r-lib/actions/setup-r@v2
         with:
