@@ -9,7 +9,7 @@ editor: source
 #  {background-image="quarto-static/slideteal.png" background-size="contain"}
 
 ::: {style="margin-left: 260px; margin-top: 100px; margin-right: 10px; font-size: 3.2em;"}
-CKMR: A general overview
+Close-kin mark-recapture: Theory and practice
 :::
 
 ::: {style="margin-left: 260px; font-size: 2em;"}
@@ -17,7 +17,7 @@ Paul B. Conn
 :::
 
 ::: {style="margin-left: 260px;"}
-The Wildlife Society CKMR Workshop, Sunday November 6, 2022
+Euring Technical Meeting, Friday 21 April, 2023
 :::
 
 ## Outline {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -37,9 +37,9 @@ The Wildlife Society CKMR Workshop, Sunday November 6, 2022
 :::: {.columns}
 
 ::: {.column width="40%"}
-![](paul1-images/conn_black_white.jpg)
+![](slides-images/conn_black_white.jpg)
 
-![](paul1-images/eric.jpg)
+![](slides-images/eric.jpg)
 :::
 
 ::: {.column width="60%"}
@@ -111,12 +111,12 @@ A CKMR website w/ more examples: [https://closekin.github.io/](https://closekin.
 * estimate abundance, survival, etc.
 * intensive sampling!
 
-![](paul1-images/hair.png)
+![](slides-images/hair.png)
 :::
 
 ::: {.column width="50%"}
 
-![](paul1-images/goose.jpg){width=80%}
+![](slides-images/goose.jpg){width=80%}
 
 :::
 ::::
@@ -178,7 +178,7 @@ plot2
 
 ::: {.column width="50%"}
 
-![](paul1-images/bear_po.png)
+![](slides-images/bear_po.png)
 
 :::
 
@@ -202,7 +202,7 @@ plot2
 
 ::: {.column width="70%"}
 
-![Cartoon credit: M. Bravington](paul1-images/CKMR_LP_fish.jpg)
+![Cartoon credit: M. Bravington](slides-images/CKMR_LP_fish.jpg)
 
 :::
 
@@ -230,13 +230,13 @@ plot2
 
 ::: {.column width="70%"}
 
-![Cartoon credit: M. Bravington](paul1-images/CKMR_LP_fish.jpg)
+![Cartoon credit: M. Bravington](slides-images/CKMR_LP_fish.jpg)
 
 :::
 
 ::: {.column width="30%"}
 
-![](paul1-images/RawdingScreenshot.jpg)
+![](slides-images/RawdingScreenshot.jpg)
 
 
 :::
@@ -313,11 +313,11 @@ Half-sibling pairs (HSPs) \rightarrow Adult abundance and survival (again assumi
 
 ## CKMR Workflow {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
-![](paul1-images/ckmr_process1.png)
+![](slides-images/ckmr_process1.png)
 
 ## CKMR Workflow {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
-![](paul1-images/ckmr_process2.png)
+![](slides-images/ckmr_process2.png)
 
 ## Pseudo-likelihood {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
@@ -332,7 +332,7 @@ $i$ and $j$ are a match.
 
 $p_{ij}$ is the probability of a match
 
-![](paul1-images/Are_you_my_mother.jpg)
+![](slides-images/Are_you_my_mother.jpg)
 
 ## Pseudo-likelihood {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
@@ -347,7 +347,7 @@ $i$ and $j$ are a match.
 
 $p_{ij}$ is the probability of a match
 
-![](paul1-images/Are_you_my_mother.jpg)
+![](slides-images/Are_you_my_mother.jpg)
 
 ### $\color{red}{\text{In reality, random variables are not independent!!}}$ 
 
@@ -373,7 +373,7 @@ But how do we figure out what the $p_{ij}$ probabilities are?  And how are these
 
 Lexis diagrams are helpful!
 
-![](paul1-images/Lexis_MO2.png)
+![](slides-images/Lexis_MO2.png)
 
 :::
 ::::
@@ -483,7 +483,7 @@ CKMR has been conducted on populations as low as $\approx 600$ but we don't want
 :::
 ::: {.column width="50%"}
 
-![](paul1-images/big_buck.jpg)
+![](slides-images/big_buck.jpg)
 
 :::
 ::::
@@ -523,7 +523,7 @@ Need $\approx 50$ kin pairs to produce reasonable estimates, required # of sampl
 
 ::: {.column width="50%"}
 
-![](paul1-images/goldilocks.jpg)
+![](slides-images/goldilocks.jpg)
 
 :::
 ::::
@@ -532,7 +532,7 @@ Need $\approx 50$ kin pairs to produce reasonable estimates, required # of sampl
 
 ### Completed or underway as of 2022 (c/o M. Bravington)
 
-![](paul1-images/map-ck-2022.jpg)
+![](slides-images/map-ck-2022.jpg)
 
 
 ## How easy is it to conduct CKMR experiments? {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -550,12 +550,12 @@ ask of a single person (especially a grad student!!!)
 
 ::: {.column width="50%"}
 
-![](paul1-images/einstein.jpg){width=50%}
+![](slides-images/einstein.jpg){width=50%}
 :::
 
 ::: {.column width="50%"}
 
-![](paul1-images/money.jpg){width=50%}
+![](slides-images/money.jpg){width=50%}
 
 :::
 ::::
@@ -567,7 +567,7 @@ ask of a single person (especially a grad student!!!)
 
 ::: {.column width="50%"}
 
-![](paul1-images/angel.jpg)
+![](slides-images/angel.jpg)
 
 :::
 
@@ -582,7 +582,7 @@ ask of a single person (especially a grad student!!!)
 
 ::: {.column width="50%"}
 
-![](paul1-images/angel.jpg)
+![](slides-images/angel.jpg)
 
 
 
@@ -603,9 +603,9 @@ ask of a single person (especially a grad student!!!)
 
 ::: {.column width="50%"}
 
-![](paul1-images/angel.jpg)
+![](slides-images/angel.jpg)
 
-![](paul1-images/belugaCI.png)
+![](slides-images/belugaCI.png)
 
 :::
 
@@ -625,21 +625,21 @@ species; see beluga example [here](https://closekin.github.io/beluga_design.html
 
 ## A CKMR case study: bearded seals {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
-Paper in prep (Taras, Conn, Quakenbush, Bravington, Baylis). Annual sampling of bearded seal subsistence harvests (tissue samples + teeth) by ADF&G
+Paper in prep (Taras, Conn, Quakenbush, Bravington, et al.). Annual sampling of bearded seal subsistence harvests (tissue samples + teeth) by Alaska Dept of Fish and Game.
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-![](paul1-images/bearded_cameron.png){width=300}
+![](slides-images/bearded_cameron.png){width=300}
 
-![](paul1-images/bearded_sampling_locations.jpg){width=400}
+![](slides-images/bearded_sampling_locations.jpg){width=400}
 :::
 
 ::: {.column width="50%"}
 
-![](paul1-images/bd_skinning_pt_hope.jpg){width=300}
-![](paul1-images/Samples_per_year_bd.jpg){width=300}
+![](slides-images/bd_skinning_pt_hope.jpg){width=300}
+![](slides-images/Samples_per_year_bd.jpg){width=300}
 :::
 ::::
 
