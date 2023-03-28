@@ -1,5 +1,5 @@
 --- 
-title: "Close-kin mark-recapture workshop, Euring Technical Meeting --- Montpellier, France"
+title: "Close-kin mark-recapture: Theory and practice, Euring Technical Meeting --- Montpellier, France"
 author: "Paul B. Conn"
 date: "April 21, 2023"
 documentclass: krantz
