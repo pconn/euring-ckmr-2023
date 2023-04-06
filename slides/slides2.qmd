@@ -1,0 +1,352 @@
+---
+format: 
+  revealjs:
+    theme: [default, ./quarto-static/eric-noaa.scss]
+    self-contained: true
+editor: source
+---
+
+#  {background-image="quarto-static/slideteal.png" background-size="contain"}
+
+::: {style="margin-left: 260px; margin-top: 100px; margin-right: 10px; font-size: 3.2em;"}
+Genetic data and kinfinding (lite)
+:::
+
+::: {style="margin-left: 260px; font-size: 2em;"}
+Paul B. Conn
+:::
+
+::: {style="margin-left: 260px;"}
+Euring Technical Meeting, Friday 21 April, 2023
+:::
+
+## Disclaimer {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](slides2-images/emperor.jpg){width=100%}
+
+:::
+::::
+I am not a geneticist!
+
+
+## Identity by descent {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+The proportion of genes inherited from a common ancestor
+
+:::: {.columns}
+::: {.column width="80%"}
+
+![](slides2-images/idb.png){width=100%}
+
+:::
+::::
+
+## Identity by descent {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+Different expectations for the proportion of shared alleles that are *identical by descent* at 
+randomly selected loci as a function of kin type (sexual reproduction, diploid)
+
+| Kin type         | $\kappa_0$         | $\kappa_1$     |  $\kappa_2$    | 
+|------------------|--------------------|----------------|----------------|
+| Parent-Offspring (PO)       | 0         |  1     |   0   |         
+| Full sibling (FS)       | 0.25         |  0.5     |   0.25   |         
+| Half sibling (HS)       | 0.5         |  0.5     |   0   | 
+| Grandparent-grandchild (GG) | 0.5         |  0.5     |   0   | 
+| Full aunt niece (FAN) | 0.5         |  0.5     |   0   | 
+| Half aunt-niece (HAN)  || 0.75         |  0.25     |   0   | 
+| First cousin | 0.75         | 0.25     |   0   | 
+| Half first-cousin | 0.875         | 0.125     |   0   | 
+| Unrelated | 1.0         | 0     |   0   | 
+
+
+$\kappa_a$ - expected fraction of genome sharing $a$ alleles IBD and a random locus
+
+
+## Kinfinding
+
+Let's look at the probability of two individuals having particular allele combinations
+at a specific loci
+*conditional* on an underlying kin relationship.  Note that individuals can have the same alleles
+even if they arent ibd.
+
+Animal $i$: $G_i$ = AB = BA
+
+Animal $j$: $G_j$ = BB
+
+We need to know the frequency of these loci in the population!  Call these, $p_A$ and $p_B$.
+
+If the animals are *unrelated* we have 
+
+$Pr (G_i, G_j | \text{unrelated}) = Pr(G_i ) Pr (G_j)$
+
+$Pr(G_i) = 1 - p_A^2 - p_B^2$
+
+$Pr(G_j ) = p_B^2$
+
+So, $Pr(G_i, G_j| \text{unrelated}) = p_B^2 (1-p_A^2-p_B^2)$
+
+## Kinfinding
+
+If the animals are *POPs* we no longer have independence.  But, 
+
+$$
+Pr(G_i, G_j | POP) = Pr(G_j) Pr(G_i| G_j, POP)
+  = p_B^2 p_A
+$$
+  
+Since either A or B must be ibd, and the other can be assumed to be random according
+to marginal population-level probabilities
+
+$$\\[0.5in]$$
+
+:::{.callout-important}
+## General formulation
+$P(G_i,G_j | \boldsymbol{\kappa}) = \kappa_0 P_0(G_i,G_j) + \kappa_1 P_1(G_i,G_j) + \kappa_2 P_2(G_i,G_j)$
+:::
+
+Note that $P_0(G_i,G_j)$ is simply the product of marginals, and $P_2(G_i,G_j)$ is an indicator function.
+The only nuance is in $P_1$!
+
+
+## Kinfinding
+
+The slide previous gives the probability of two genotypes at a given locus *conditional* on a particular kin relationship
+
+To quantify evidence for a particular relationship, we'll use *likelihood ratios*  E.g.,
+
+$$ 
+\frac{L_{PO}(G_i,G_j)}{L_U{G_i,G_j)}} = \frac{P(G_i,G_j | \boldsymbol{\kappa}(PO))}{P(G_i,G_j | \boldsymbol{\kappa}(U))} 
+$$
+
+We'll also want to extend things to be multi-allelic
+
+$$ 
+\frac{L_{PO}({\bf G}_i,{\bf G}_j)}{L_U{{\bf G}_i,{\bf G}_j)}} = \frac{P({\bf G}_i,{\bf G}_j | \boldsymbol{\kappa}(PO))}{P({\bf G}_i,{\bf G}_j | \boldsymbol{\kappa}(U))} 
+$$
+
+where e.g.
+
+$$
+P({\bf G}_i,{\bf G}_j | \boldsymbol{\kappa}(PO)) = \prod_k P(G_{ik},G_{jk} | \boldsymbol{\kappa}(PO))
+$$
+
+## Kinfinding
+
+Note taking a product implies independence, something that will be violated by linkage
+
+:::: {.columns}
+::: {.column width="60%"}
+
+![](slides2-images/linkage.jpg){width=100%}
+
+:::
+::::
+
+More on this in a few slides!
+
+## Kinfinding
+
+Here's what we want our likelihood ratios to looks like!!
+
+```{r lik_hist1,echo=FALSE}
+library(ggplot2)
+means = c(0,15,60,70)
+
+N = c(100,50,5,50)
+SD1 = 2
+SD2 = 4
+Types = c("HAN","HSP","FS","PO")
+hist_fun = function(n,means,sd,Types){
+  n_bins = length(n)
+  Sim = vector("list",n_bins)
+  for(i in 1:n_bins){
+    Sim[[i]]=rnorm(n[i],means[i],sd)
+  }
+  Hist_df = data.frame(matrix(0,sum(n),2))
+  colnames(Hist_df) = c("Value","Type")
+  start = 1
+  for(i in 1:n_bins){
+    Hist_df[start:(start+n[i]-1),1]=Sim[[i]]
+    Hist_df[start:(start+n[i]-1),2]=Types[i]
+    start = start + n[i]
+  }
+  plot = ggplot(Hist_df) + geom_histogram(aes(x=Value,group=Type,fill=Type),alpha=0.3,binwidth=1) + 
+    geom_density(aes(y=..count..,x=Value,group=Type,fill=Type),alpha=0.3) + xlab("Log likelihood ratio (PO/U)")+ylab("Count")
+  plot
+}
+
+plot1 = hist_fun(N,means,SD1,Types)
+plot1 
+```
+
+## Kinfinding
+
+Unfortunately, this is more often the case:
+
+```{r lik_hist2,echo=FALSE}
+
+plot2 = hist_fun(N,means,SD2,Types)
+plot2 
+```
+
+## Kinfinding
+
+For real problems, we don't get the colors!  However we have an approximate
+idea of where the means should be (assuming Hardy-Weinberg, no linkage, etc)
+
+```{r lik_hist3,echo=FALSE}
+
+hist_fun2 = function(n,means,sd,Types){
+  n_bins = length(n)
+  Sim = vector("list",n_bins)
+  for(i in 1:n_bins){
+    Sim[[i]]=rnorm(n[i],means[i],sd)
+  }
+  Hist_df = data.frame(matrix(0,sum(n),2))
+  colnames(Hist_df) = c("Value","Type")
+  start = 1
+  for(i in 1:n_bins){
+    Hist_df[start:(start+n[i]-1),1]=Sim[[i]]
+    Hist_df[start:(start+n[i]-1),2]=Types[i]
+    start = start + n[i]
+  }
+  plot = ggplot(Hist_df) + geom_histogram(aes(x=Value,y=..count..,group=Type),alpha=0.3,binwidth=1) + 
+    xlab("Log likelihood ratio (PO/U)")+ylab("Count")+geom_vline(xintercept=means)
+  plot
+}
+
+plot3 = hist_fun2(N,means,SD2,Types)
+plot3 
+```
+
+## Kinfinding
+
+Several strategies: 
+
+-Use enough loci (and with sufficient heterozygosity) to separate the curves.  In our bearded seal study, after QA/QC we had 2,569 loci and still
+had to deal with it though!
+
+-Fit a normal mixture model, specify a false-negative threshold that effectively eliminates the probability
+of false positives, and use estimated false negative probability $\alpha$ in CKMR likelihood
+
+```{r mixture2, echo=FALSE}
+  X = c(-50:150)
+  Y_no = 500*dnorm(X,0,30)
+  Y_sib = 100*dnorm(X,100,20)
+  Plot_df = data.frame("PLOD_value"=rep(X,2),"Expected_Count"=c(Y_no,Y_sib),Type=c(rep("Distant",length(X)),rep("HSP",length(X))))
+  library(ggplot2)
+  ggplot(Plot_df)+geom_line(aes(x=PLOD_value,y=Expected_Count,group=Type,color=Type),size=1.3)+theme(text=element_text(size=24))+
+    geom_vline(xintercept = 90,size=1.3)
+```
+
+i.e., replace $Pr(HSP)$ with $Pr(HSP)(1-\alpha)$  (stay tuned)
+
+
+## Kinfinding
+
+Eric Anderson has a great R package, *CKMRsim*, for kinfinding.  By conducting simulations that "sprinkle"
+proposed loci into a like genome, one can also see what linkage and genotyping errors will tend to do to potential variances
+
+Using simulations based on the number of loci and approximate genomic structure of bearded seals:
+
+![](slides2-images/link-vs-unlink.png){width=50%}
+
+
+
+## Kinfinding
+
+-Actual bearded seal data kin-finding used M. Bravington's and S. Baylis' *kinference* package
+
+-Strange shape (left-skewed) - we estimated variance with the right half-normal and considered different log-odds thresholds and associated probabilities in CKMR sensitivity runs.  Hopefully would go problem with go away with more data!
+
+![](slides2-images/HSP_plod_bearded.png){width=50%}
+
+
+## Genotyping
+
+But how do we go from tissue samples to alleles at different loci??
+
+![](slides2-images/sample_to_genotype.png){width=50%}
+
+
+## Genotyping
+
+Much more thorough (and accurate) summary at https://eriqande.github.io/tws-ckmr-2022/slides/eric-talk-1.html
+
+A non-exhaustive list of markers/"loci":
+
+- **Microsatellites**: highly polymorphic (which is good!).  These are usually what is used in "regular" genetic mark-recapture, but sample sizes likely not high enough for many kin finding tasks (esp half-sibs).  qPCR requires known sequences!
+
+- **SNPs** i.e., Single nucleotide polymorphisms.  Can be identified with next generation sequencing, which can ID thousands of loci!  Rapid increase in CKMR studies/literature likely attributable to NGS technology.
+
+*I'll focus on SNPs via NGS which is what CSIRO uses for fisheries assessments and we used for bearded seals*
+
+
+## Genotyping
+
+CSIRO uses Diversity Arrays Technology (DArT), a company with academic ties out of Australia.
+
+Basic workflow:
+
+1) Prep samples
+
+2) Use an initial set of DNA samples (100s of individuals) with DArTseq technology to identify candidate SNP markers (often in the 10s of 1000s)
+
+3) Identify those markers that will be the most useful (appear to "behave" correctly, include sufficient allele diversity)
+
+4) Run DArTcap on *all* tissue samples  with reduced set of markers with baits developed from DArTseq
+
+5) Further QA/QC
+
+6) Summarize genotypes at surviving loci 
+
+
+## Genotyping
+
+DArTseq data are actually count data!  Counts of # of alleles at 
+different loci made in replicate sequencings.  These need to be converted to genotypes...
+
+![](slides2-images/DArTcsv.png){width=80%}
+
+
+
+## Genotyping
+
+4-way genotyping setup: $AA0$, $BB0$, $AB$, $00$
+
+
+6-way genotyping setup: $AA$, $A0$, $AB$, $BB$, $B0$, $00$
+
+```{r read_bar, echo=FALSE}
+Count_df = data.frame(Count = c(12,8,1,17,0,0,10,1),
+                      Individual = c(1,1,2,2,3,3,4,4),
+                      Allele = as.character(c(1,2,3,4,5,6,7,8)))
+
+library(ggplot2)
+ggplot()+geom_col(data=Count_df,aes(x=Allele,y=Count,fill=Individual))+
+  scale_x_discrete(labels=c("A","B","A","B","A","B","A","B"))
+```  
+
+
+- The '0' represents a null allele (no reads)
+- For HSPs, 4-way requires lower read depths (10+) and ideally 3000+ loci
+- 6-way require higher read depths (e.g., 100) and ideally 1500+ loci
+- 6-way considerably more complicated
+- The actual number you need depends on the amount of genetic diversity in the population (higher is better)
+
+## Genotyping
+
+Bearded seal study:
+
+* DArTseq on 282 samples yielded data on 76,000 potential loci
+* Eliminating loci with low read depth and other issues reduced this to 21,000 loci
+* DArT suggested about 6,000 loci were appropriate for making DArTcap baits
+* Cross-referencing our 21,000 with the 6,000 DArT recommended resulted in
+  about 4,000 for DArTcap
+* Preliminary analysis suggested this was great resolution for separating HSPs from HTPs
+* Of course, not all the 4,000 loci worked as planned...
+* Further QA/QC with DArTcap data resulted in 2,569 loci that were ultimately used for genotyping

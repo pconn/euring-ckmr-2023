@@ -30,12 +30,17 @@ options(knitr.duplicate.label = "allow")  # because our slides might have code b
 
 
 quarto::quarto_render(
-  "slides/slides.qmd",
+  "slides/slides1.qmd",
   output_format = "revealjs"
 )
-file.rename(from = "slides/slides.html", to = "_book/slides/slides.html")
+file.rename(from = "slides/slides1.html", to = "_book/slides/slides1.html")
 
 
+quarto::quarto_render(
+  "slides/slides2.qmd",
+  output_format = "revealjs"
+)
+file.rename(from = "slides/slides2.html", to = "_book/slides/slides2.html")
 
 
 # quarto::quarto_render(
