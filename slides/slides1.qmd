@@ -65,7 +65,7 @@ Other acknowledgments: Eric Anderson, Jay Ver Hoef (NOAA); Mark Bravington (CSIR
 2:30--2:45    | Break | 
 2:45--3:45   | Statistical inference for CKMR estimation | 
 3:45--4:45  | Designing CKMR experiments (including code demo) |   
-4:45--5:00  | Thought experiments |
+4:45--5:00  | Thought experiments / bird considerations |
 
 
 
@@ -89,16 +89,23 @@ expertise required for successful CKMR implentations (including ecology, genetic
 
 ## Preliminaries: Resources {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
-Slides: 
+**Slides**:
+
 Intro [https://pconn.github.io/euring-ckmr-2023/slides/slides1.html](https://pconn.github.io/euring-ckmr-2023/slides/slides1.html)
+
 Genetics/kin-finding [https://pconn.github.io/euring-ckmr-2023/slides/slides1.html](https://pconn.github.io/euring-ckmr-2023/slides/slides2.html)
+
 Statistical theory [https://pconn.github.io/euring-ckmr-2023/slides/slides3.html](https://pconn.github.io/euring-ckmr-2023/slides/slides3.html)
+
 Design [https://pconn.github.io/euring-ckmr-2023/slides/slides4.html](https://pconn.github.io/euring-ckmr-2023/slides/slides4.html)
+
 Thought experiments [https://pconn.github.io/euring-ckmr-2023/slides/slides5.html](https://pconn.github.io/euring-ckmr-2023/slides/slides5.html)
 
-General workshop github repository: [https://github.com/eriqande/tws-ckmr-2022](https://github.com/eriqande/tws-ckmr-2022)
+**General workshop github repository**: [https://github.com/pconn/euring-ckmr-2023](https://github.com/pconn/euring-ckmr-2023)
 
-A CKMR website w/ more examples: [https://closekin.github.io/](https://closekin.github.io/)
+**Site for a previous, full day workshop with more slides, code & examples**: [https://eriqande.github.io/tws-ckmr-2022](https://eriqande.github.io/tws-ckmr-2022)
+
+**A CKMR website w/ more examples**: [https://closekin.github.io/](https://closekin.github.io/)
 
 
 
@@ -342,7 +349,7 @@ $p_{ij}$ is the probability of a match
 Compare each genotyped sample to all of the others.  We can then maximize the 
 pseudo-likelihood
 
-$\prod_i \prod_{j>i} p_{ij} y_{ij} + (1-p_{ij}) (1-y_{ij})$
+$\prod_i \prod_{j>i} p_{ij}^{y_{ij}} (1-p_{ij})^{1-y_{ij}}$
 
 $y_{ij}$ is a binary random variable taking on the value 1.0 if animals
 $i$ and $j$ are a match.  
@@ -410,7 +417,7 @@ In words: the probability of a mother-offspring pair is zero if the potential mo
 
 ## CKMR Assumptions {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
- 1. Accurate genotyping (no false positives!)
+ 1. Accurate genotyping (no false positive kin pairs!)
  
  2. Population and sampling models are accurate 
 
@@ -427,7 +434,7 @@ In words: the probability of a mother-offspring pair is zero if the potential mo
 
 ## CKMR Assumptions - Implications {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
     
- 1. Accurate genotyping (no false positives!)
+ 1. Accurate genotyping (no false positive kin pairs!)
  
  We need enough genetic markers to tell apart various kin groups.  For parent-offspring pairs we 
  might only need 200 SNPs or so, but for half-siblings it is nice to have 3-4K (after pruning ill-behaved loci).
@@ -633,7 +640,7 @@ Paper in prep (Taras, Conn, Quakenbush, Bravington, et al.). Annual sampling of 
 
 ::: {.column width="50%"}
 
-![](slides-images/bearded_cameron.png){width=300}
+![](slides-images/bearded_cameron.jpg){width=300}
 
 ![](slides-images/bearded_sampling_locations.jpg){width=400}
 :::
@@ -656,7 +663,7 @@ Our paper isn't published yet so I can't make all data public yet. But we can st
 
 * Size of Beringia DPS thought to be 400-500K seals!  
 
-* We had something like 2000 tissue samples over $\approx 20$ 
+* We had $\approx 2500$ tissue samples over 20 
 years.
 
 * Can we use this to get an idea of overall abundance?  What special things will we need to 
