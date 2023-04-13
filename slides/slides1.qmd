@@ -60,12 +60,12 @@ Other acknowledgments: Eric Anderson, Jay Ver Hoef (NOAA); Mark Bravington (CSIR
 
 | Time      | Description  |
 | :--:        |    :--------   
-1:00--1:45    |  Close-kin mark-recapture: An overview | 
-1:45--2:30    |  Genetic data and kinfinding lite | 
-2:30--2:45    | Break | 
-2:45--3:45   | Statistical inference for CKMR estimation | 
-3:45--4:45  | Designing CKMR experiments (including code demo) |   
-4:45--5:00  | Thought experiments / bird considerations |
+1:30--2:15    |  Close-kin mark-recapture: An overview | 
+2:15--3:00    |  Genetic data and kinfinding lite | 
+3:00--3:15    | Break | 
+3:15--4:15   | Statistical inference for CKMR estimation | 
+4:15--5:15  | Designing CKMR experiments (including code demo) |   
+5:15--5:30  | Thought experiments / bird considerations |
 
 
 

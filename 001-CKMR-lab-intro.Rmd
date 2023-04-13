@@ -1,49 +1,10 @@
+# Preliminaries {-}
 
-# CKMR thought experiments and labs
+The course will start with 4 sets of slides, take a brief detour into a code demo for study design, and then finish up with a fifth set of slides.The following is the middle piece - the study design "code demo"!
 
-In the second half of this course, we're going to switch gears and delve into some code.  But first,
-we're going to conduct a few thought experiments to try to get you to think critically about
-some of the CKMR concepts we've covered so far.  We'll also be switching from slides to this "book" -
-hopefully this will be a useful resource for those of you who want to look back at course content.
+I'll preface this with saying that I just plan on showing Rmarkdown in the workshop, as I'm not sure people really get much by cutting and pasting code snippets into R.  There is also a bit of a toolchain to get this code working.  However, if you're interested in getting the code up and running you should follow the instructions at 
 
+https://eriqande.github.io/tws-ckmr-2022/
 
-## Afternoon schedule 
+I've followed Eric Anderson's lead in using the Renv package to make sure R packages all work together (those used here date back to fall 2022).  But you will also need to have RTools, etc.  Please see Eric's detailed instructions to try to get something working if you're interested in running the code yourself.
 
-An approximate schedule for the afternoon is
-
-- 1:00 - 1:30 Thought experiments
-- 1:30 - 2:30 Kin finding lab
-- 2:30 - 2:45 Break
-- 2:45 - 3:30 White shark estimation example
-- 3:30 - 4:30 CKMR Design
-- 4:30 - 5:00 Open!  Feel free to play with code or ask us questions
-
-## Thought experiments
-
-We think it would be useful for participants to break into small groups for this one.  So let's do that.
-
-Note that there are not necessarily any right or wrong answers to these exercises - but we're interested to hear what people come up with!
-
-### Thought experiment 1
-
-<div class="alert alert-info">
-  Assume that mitochondrial haplotype diversity is high, so that we can definitely tell MHSPs from PHSPs.  What might be causes for the number of PHSPs being significantly greater than the number of MHSPs?
-</div>
-
-### Thought experiment 2
-
-<div class="alert alert-info">
-  What sampling or population conditions might lead to negative bias in CKMR abundance estimates?  How about positive bias in abundance estimates?
-</div>
-
-### Thought experiment 3
-
-<div class="alert alert-info">
-  Imagine that we are conducting a CKMR experiment using POPs.  Given that CKMR estimators of abundance are in essence backdated to the year of the offspring's birth, how might we sample animal populations to get better precision in the most recent years?
-</div>
-
-### Thought experiment 4
-
-<div class="alert alert-info">
-  Suppose we are thinking about using CKMR to estimate the abundance of a migratory goose population, where males and females routinely form lifelong pair bonds, and goslings stay with their parents for the first year of life or so.  Genetics samples are available from parts collection surveys (from hunter harvests), and the goal is to estimate adult abundance for a particular flyway.  What are some things to consider when designing a CKMR study with these data?
-</div>

@@ -1,0 +1,113 @@
+---
+format: 
+  revealjs:
+    theme: [default, ./quarto-static/eric-noaa.scss]
+    self-contained: true
+editor: source
+---
+
+#  {background-image="quarto-static/slideteal.png" background-size="contain"}
+
+::: {style="margin-left: 260px; margin-top: 100px; margin-right: 10px; font-size: 3.2em;"}
+Thought experiments on birds
+:::
+
+::: {style="margin-left: 260px; font-size: 2em;"}
+Paul B. Conn
+:::
+
+::: {style="margin-left: 260px;"}
+EURING Technical Meeting, 21 April, 2023
+:::
+
+## CKMR: Possible challenges with birds {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Pair bonding dynamics
+
+- Possible issues?
+
+- How to alleviate assumption violations?
+
+:::
+
+::: {.column width="50%"}
+![](slides5-images/mallard_pair.jpg){width=50%}
+![](slides5-images/bald_eagle_pair.jpg){width=50%}
+
+:::
+::::
+
+
+## CKMR: Possible challenges with birds {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Dependence in fates and spatial dependence
+
+- Are kin pairs likely to share the same fate / be 
+sampled together?
+
+- How to alleviate assumption violations?
+
+:::
+
+::: {.column width="50%"}
+![](slides5-images/hunters.jpg){width=50%}
+![](slides5-images/migration_map.jpg){width=50%}
+:::
+::::
+
+
+## CKMR: Possible challenges with birds {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Ages or lack thereof
+
+- Only juvenile age known with certainty?
+
+- Epigenetic aging?
+
+- Strategies for modeling?
+
+:::
+::: {.column width="50%"}
+![](slides5-images/feathers.png){width=50%}
+:::
+::::
+
+
+## CKMR: Possible challenges with birds {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+
+Sampling 
+
+-How to get high quality tissue sampled?
+
+-Sample sizes for large populations
+
+:::
+::: {.column width="50%"}
+![](slides5-images/parts_collection.jpg){width=50%}
+:::
+::::
+
+
+## CKMR: Nous avons finis!! {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
+
+
+Merci!!  
+
+Please fill out a post-workshop survey at the link in the workshop "book" to help me improve this workshop for future participants.
+
+ 
+
+![](slides5-images/red_wine.jpg){width=30%}

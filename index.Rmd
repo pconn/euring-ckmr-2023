@@ -37,12 +37,12 @@ An approximate schedule for the workshop is as follows.
 
 | Time      | Description  |
 | :--:        |    :--------   
-1:00--1:45    |  Close-kin mark-recapture: An overview | 
-1:45--2:30    |  Genetic data and kinfinding lite | 
-2:30--2:45    | Break | 
-2:45--3:45   | Statistical inference for CKMR estimation | 
-3:45--4:45  | Designing CKMR experiments (including code demo) |   
-4:45--5:00  | Thought experiments |
+1:30--2:15    |  Close-kin mark-recapture: An overview | 
+2:15--3:00    |  Genetic data and kinfinding lite | 
+3:00--3:15    | Break | 
+3:15--4:15   | Statistical inference for CKMR estimation | 
+4:15--5:15  | Designing CKMR experiments (including code demo) |   
+5:15--5:30  | Thought experiments / birds |
 
 
 ```{r include=FALSE}
@@ -60,9 +60,7 @@ https://github.com/pconn/euring-ckmr-2023
 The "website" version of the course which serves up this book and the
 slides is available at
 
-https://pconn.github.io/euring-ckmr-2023/ and
-
-https://pconn.github.io/euring-ckmr-2023/slides/slides.html
+https://pconn.github.io/euring-ckmr-2023/ 
 
 These will remain publically available until something breaks!
 
@@ -73,6 +71,15 @@ https://closekin.github.io/
 and materials from a longer, full day workshop (cotaught w/ Eric Anderson) that includes more genetics detail and R/TMB code at
 
 https://eriqande.github.io/tws-ckmr-2022/
+
+## Post-workshop survey {-}
+
+I'd really appreciate help in improving this workshop for future participants.  After the workshop, please go to 
+
+https://docs.google.com/forms/d/e/1FAIpQLSfV4LDzu9BJ24zuTCWaBo5c8vidF5CFUe-81Z59JMzBG-S-_g/viewform?usp=sf_link
+
+to fill one out. I'll also email the link to participants.
+
 
 
 

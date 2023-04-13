@@ -17,7 +17,7 @@ Paul B. Conn
 :::
 
 ::: {style="margin-left: 260px;"}
-The Wildlife Society CKMR Workshop, Sunday November 6, 2022
+EURING Technical Meeting, 21 April, 2023
 :::
 
 ## Outline {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -30,7 +30,7 @@ The Wildlife Society CKMR Workshop, Sunday November 6, 2022
 * Addressing assumption violations through modeling
 * Data formatting
 * Pseudo-likelihood & optimization
-* Application to weirded seals
+* Application to bearded seals
 
 
 ## ERRO revisited {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -103,7 +103,7 @@ ages of animals (stay tuned...)
 
 ::: {.column width="50%"}
 
-![](paul1-images/Lexis_MO2.png)
+![](slides-images/Lexis_MO2.png)
 
 :::
 ::::
@@ -198,7 +198,7 @@ Two commonly used approaches:
 * Initial abundance, adult survival and possibly fecundity-at-age estimated
 * Population trend and later abundances emergent properties of population model
 
-![](paul2-images/caswell.jpg){width=30%}
+![](slides3-images/caswell.jpg){width=30%}
 
 :::
 
@@ -222,7 +222,7 @@ Two commonly used approaches:
 * Initial abundance, adult survival and possibly fecundity-at-age estimated
 * Population trend and later abundances emergent properties of population model
 
-![](paul2-images/caswell.jpg){width=30%}
+![](slides3-images/caswell.jpg){width=30%}
 :::
 
 
@@ -233,7 +233,7 @@ Two commonly used approaches:
 
 Change this
 
-![](paul2-images/fec_age_fem_bearded.png){width=60%}
+![](slides3-images/fec_age_fem_bearded.png){width=60%}
 
 
 :::
@@ -254,7 +254,7 @@ Two commonly used approaches:
 * Initial abundance, adult survival and possibly fecundity-at-age estimated
 * Population trend and later abundances emergent properties of population model
 
-![](paul2-images/caswell.jpg){width=30%}
+![](slides3-images/caswell.jpg){width=30%}
 :::
 
 
@@ -265,7 +265,7 @@ Two commonly used approaches:
 
 Into this!!  Model adult = 5+ abundance and survival only
 
-![](paul2-images/fec_age_fem_bearded_knife.png){width=60%}
+![](slides3-images/fec_age_fem_bearded_knife.png){width=60%}
 
 :::
 ::::
@@ -297,7 +297,7 @@ Advantages and disadvantages:
 * Harder to adapt to aging error, etc.
 * May have to throw out some PO pairs (where parent is not an "adult" according to age cutoff)
 
-![](paul2-images/holding_nose.png){width=30%}
+![](slides3-images/holding_nose.png){width=30%}
 :::
 ::::
 
@@ -377,7 +377,7 @@ aging method (Conn & Diefenbach 2007)
 
 Summaries from aging labs from individual teeth will not typically be sufficient to get a handle on aging error!
 
-![](paul2-images/cementum.png){width=30%}
+![](slides3-images/cementum.png){width=30%}
 
 ## Addressing assumption violations through modeling {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
@@ -416,7 +416,7 @@ from stable age calculations)
 Assuming we have data to estimate aging error distributions and a prior distribution of
 ages, we can implement a CKMR model that sums across the possibility of different age combinations
 
-![](paul2-images/lexis_age_error1.png)
+![](slides3-images/lexis_age_error1.png)
 
 ## Addressing assumption violations through modeling {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
@@ -425,7 +425,7 @@ ages, we can implement a CKMR model that sums across the possibility of differen
 Assuming we have data to estimate aging error distributions and a prior distribution of
 ages, we can implement a CKMR model that sums across the possibility of different age combinations
 
-![](paul2-images/lexis_age_error2.png)
+![](slides3-images/lexis_age_error2.png)
 
 $p_{ij} = \sum_{a_i} \sum_{a_j} w_{a_i,a_j} \tilde{p}_{ij}$
 
@@ -516,7 +516,7 @@ If HSP analysis is even possible (it might not be if there is a high frequency o
 
 * Use frequency of each haplotype ($\tau_x$) to determine probabilities of sex (Bayes rule again!)
 
-![](paul2-images/mtDNA.jpg)
+![](slides3-images/mtDNA.jpg)
 
 
 ## Addressing assumption violations through modeling {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -537,7 +537,7 @@ $b_j - b_i < \text{inter-birth interval}$
 
 ::: {.column width="50%"}
 
-![](paul2-images/grizzlies.png)
+![](slides3-images/grizzlies.png)
 
 :::
 ::::
@@ -568,7 +568,7 @@ Approaches:
 
 ::: {.column width="50%"}
 
-![](paul2-images/fighting-sea-lions.jpg)
+![](slides3-images/fighting-sea-lions.jpg)
 :::
 ::::
 
@@ -594,7 +594,7 @@ Approaches:
 :::
 
 ::: {.column width="50%"}
-![](paul2-images/fin_whale_map.jpg)
+![](slides3-images/fin_whale_map.jpg)
 :::
 
 ::::
@@ -637,7 +637,7 @@ Two approaches:
 
 ::: {.column width="50%"}
 
-![](paul2-images/GGP.png)
+![](slides3-images/GGP.png)
 :::
 
 ::::
@@ -655,7 +655,7 @@ You've got kin!  Now what?!
 
 ::: {.column width="95%"}
 
-![](paul2-images/got-dna.jpg)
+![](slides3-images/got-dna.jpg)
 :::
 ::::
 
@@ -693,13 +693,13 @@ And then a file giving kin matches like
 
 ::: {.column width="80%"}
 
-![](paul2-images/mij.jpg){width=700}
+![](slides3-images/mij.jpg){width=700}
 
 :::
 
 ::: {.column width="20%"}
 
-![](paul2-images/Cavell_Brownie.jpg)
+![](slides3-images/Cavell_Brownie.jpg)
 
 :::
 ::::
@@ -725,13 +725,13 @@ etc.
 
 ::: {.column width="50%"}
 
-![](paul2-images/phidot.jpg){width=200}
+![](slides3-images/phidot.jpg){width=200}
 
 :::
 
 ::: {.column width="50%"}
 
-![](paul2-images/rmark.jpg){width=200}
+![](slides3-images/rmark.jpg){width=200}
 
 :::
 ::::
@@ -843,7 +843,7 @@ to minimize the negative log-likelihood (e.g. TMB + nlminb)
 
 * Assume fixed fecundity-at-age (females), maturity-at-age (males) schedules; prior distribution on mortality 
 
-![](paul2-images/bearded_life_history.jpg)
+![](slides3-images/bearded_life_history.jpg)
 
 ## Bearded seal example {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
 
@@ -853,7 +853,7 @@ to minimize the negative log-likelihood (e.g. TMB + nlminb)
 
 * Tried several thresholds for HSP PLOD scores
 
-![](paul2-images/HSP_plod_bearded.png)
+![](slides3-images/HSP_plod_bearded.png)
 
 
 ## Bearded seal example {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -876,7 +876,7 @@ to minimize the negative log-likelihood (e.g. TMB + nlminb)
 
 Updated survival priors: lower maximum survival, but reduced senescent effect
 
-![](paul2-images/bearded_surv_prior_posterior.png)
+![](slides3-images/bearded_surv_prior_posterior.png)
 
 
 ## Bearded seal example {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -889,7 +889,7 @@ Updated survival priors: lower maximum survival, but reduced senescent effect
 
 * What population are we estimating??
 
-![](paul1-images/bearded_sampling_locations.jpg)
+![](slides-images/bearded_sampling_locations.jpg)
 
 
 
