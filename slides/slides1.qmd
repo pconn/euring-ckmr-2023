@@ -93,7 +93,7 @@ expertise required for successful CKMR implentations (including ecology, genetic
 
 Intro [https://pconn.github.io/euring-ckmr-2023/slides/slides1.html](https://pconn.github.io/euring-ckmr-2023/slides/slides1.html)
 
-Genetics/kin-finding [https://pconn.github.io/euring-ckmr-2023/slides/slides1.html](https://pconn.github.io/euring-ckmr-2023/slides/slides2.html)
+Genetics/kin-finding [https://pconn.github.io/euring-ckmr-2023/slides/slides2.html](https://pconn.github.io/euring-ckmr-2023/slides/slides2.html)
 
 Statistical theory [https://pconn.github.io/euring-ckmr-2023/slides/slides3.html](https://pconn.github.io/euring-ckmr-2023/slides/slides3.html)
 
@@ -315,9 +315,9 @@ ggplot(data)+geom_histogram(aes(x=Years))
 A framework for estimating *adult* abundance and survival using the frequency of
 observed kinship relationships 
 
-Parent-offspring pairs (POPs) \rightarrow Adult abundance and reproductive schedules (assuming age is known...)
+- Parent-offspring pairs (POPs) $\rightarrow$ Adult abundance and reproductive schedules (assuming age is known...)
 
-Half-sibling pairs (HSPs) \rightarrow Adult abundance and survival (again assuming ages are known)
+- Half-sibling pairs (HSPs) $\rightarrow$ Adult abundance and survival (again assuming ages are known)
 
 
 ## CKMR Workflow {background-image="quarto-static/slideswoosh-white.png" background-size="contain"}
@@ -663,7 +663,7 @@ Our paper isn't published yet so I can't make all data public yet. But we can st
 
 * Size of Beringia DPS thought to be 400-500K seals!  
 
-* We had $\approx 2500$ tissue samples over 20 
+* We had $\approx 2000$ tissue samples over 20 
 years.
 
 * Can we use this to get an idea of overall abundance?  What special things will we need to 

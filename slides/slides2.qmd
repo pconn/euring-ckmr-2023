@@ -26,7 +26,7 @@ Euring Technical Meeting, Friday 21 April, 2023
 :::: {.columns}
 ::: {.column width="50%"}
 
-![](slides2-images/emperor.jpg){width=100%}
+![](slides2-images/emperor.jpg){width=50%}
 
 :::
 ::::
@@ -40,7 +40,7 @@ The proportion of genes inherited from a common ancestor
 :::: {.columns}
 ::: {.column width="80%"}
 
-![](slides2-images/idb.png){width=100%}
+![](slides2-images/idb.png){width=80%}
 
 :::
 ::::
@@ -57,7 +57,7 @@ randomly selected loci as a function of kin type (sexual reproduction, diploid)
 | Half sibling (HS)       | 0.5         |  0.5     |   0   | 
 | Grandparent-grandchild (GG) | 0.5         |  0.5     |   0   | 
 | Full aunt niece (FAN) | 0.5         |  0.5     |   0   | 
-| Half aunt-niece (HAN)  || 0.75         |  0.25     |   0   | 
+| Half aunt-niece (HAN)  |  0.75         |  0.25     |   0   | 
 | First cousin | 0.75         | 0.25     |   0   | 
 | Half first-cousin | 0.875         | 0.125     |   0   | 
 | Unrelated | 1.0         | 0     |   0   | 
@@ -103,7 +103,7 @@ to marginal population-level probabilities
 
 $$\\[0.5in]$$
 
-:::{.callout-important}
+:::{.callout-tip}
 ## General formulation
 $P(G_i,G_j | \boldsymbol{\kappa}) = \kappa_0 P_0(G_i,G_j) + \kappa_1 P_1(G_i,G_j) + \kappa_2 P_2(G_i,G_j)$
 :::

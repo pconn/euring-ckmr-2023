@@ -256,7 +256,7 @@ Fortunately, you don't have to reinvent the wheel.  There are sevaral R packages
 individual-based simulation, with mating, movement, mortality, etc., keeping track of kin relationships.  
 They can also simulate sampling (as in a monitoring program).
 
-* **CKMRpop** -- created by Eric Anderson (one of your instructors!), this is probably the most "advanced" package out there and keeps track of a greater number of kin types (e.g., niblings) which can be useful if you're wondering how useful half-sibs will be in populations that have a substantial amount of full siblings.
+* **CKMRpop** -- created by Eric Anderson, this is probably the most "advanced" package out there and keeps track of a greater number of kin types (e.g., niblings) which can be useful if you're wondering how useful half-sibs will be in populations that have a substantial amount of full siblings.
 
 * **fishsim** -- created by S. Baylis (CSIRO postdoc), I've used this in previous simulation work.  It is flexible in the way things are ordered (mortality, movement, calculation of annual abundance) which may come in handy when implementing different types of population models (pre- vs. post-breeding census, etc.).  Last I checked, efficiency of code could be improved in some places
 

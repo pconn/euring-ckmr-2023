@@ -589,8 +589,6 @@ Approaches:
 
 * Need to know something about movement, and *also* have a model for how abundance varies over space to calculate ERRO spatially 
 
-* There's a poster at TWS that might be worth checking out (Gilia Patterson, OSU)
-
 :::
 
 ::: {.column width="50%"}
@@ -803,6 +801,7 @@ Let's say we're looking at a 20 year study where the max age of an animal is 20 
 ## Format close-kin data into *arrays* of comparisons & matches
 * vast computational improvement!
 * the number of calculations does not depend on sample size!
+* I like using exclamation points!
 :::
 
 
@@ -885,7 +884,7 @@ Updated survival priors: lower maximum survival, but reduced senescent effect
 
 * Uncertainty almost certainly underestimated
 
-* Estimates are mostly lower than those expected from comprehensive aerial surveys (400-500K)
+* Estimates are mostly lower than those expected from comprehensive aerial surveys ($\approx 500,000$)
 
 * What population are we estimating??
 
